@@ -1,0 +1,26 @@
+.containerSandwich {
+  color: rgb(37, 16, 16);
+  margin: 30px;
+}
+
+.btnSandwichContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btnSandwich {
+    background-color: lightcyan;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.h2Sandwich{
+    text-align: center;
+}
+
+.imgSandwich{
+    width: 100%;
+}

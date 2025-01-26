@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+.spanLesson06{
+    color: red;
+    display: flex;    
+    align-items: center;    
+}
+
+.containerLesson06{
+    display: flex;
+    justify-content: center;
+}
+
+.counterMainDivLesson06 > img{
+    width: 100%;
+}
+
+.btnLesson06{
+    margin: 15px;
+    border: 2px solid yellowgreen;
+    background-color: brown;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 20%;
+}
+
+.h1Lesson06{
+    text-align: center;
+}
