@@ -1,0 +1,28 @@
+.containerFoodFacts{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 20px;
+    border: 5px solid #213547;
+    border-radius: 25px;
+    padding: 10px;
+    overflow: hidden;   
+}
+
+.containerFoodFacts > h2{
+    padding: 0;
+    margin: 0;
+}
+
+.imgContainerFoodFacts{
+    height: 300px;    
+}
+
+.imgFoodFacts{
+    height: 100%;    
+}
+
+.btnFoodFacts{
+    background-color: #213547;
+    color: aliceblue;
+}

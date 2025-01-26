@@ -1,18 +1,14 @@
-import './App.css'
-import CarShop from './components/car/carShop/CarShop'
-import Playground from './components/playground/Playground'
-import RandomDog from './components/randomDog/RandomDog'
-import Sandwich from './components/sandwich/Sandwich'
-// import Lesson06 from './lessons/lesson06/lesson06'
+import "./App.css";
+import Homework07 from "./homeworks/homework07/Homework07";
+import Lesson06 from "./lessons/lesson06/Lesson06";
+import Lesson07 from "./lessons/lesson07/Lesson07";
 
 function App(): JSX.Element {
-  
-
   return (
     <>
-      <RandomDog />
+      <Homework07 />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
