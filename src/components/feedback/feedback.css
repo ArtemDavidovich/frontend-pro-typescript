@@ -1,0 +1,30 @@
+.divHmwrk04{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+          
+}
+
+.divHmwrk04 > h2{
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.containerHmwrk04{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(0, 128, 251, 0.5);
+    max-width: 250px;        
+}
+
+.containerHmwrk04 > h1{
+    margin: 0 0 20px 0;
+}
+
+.containerHmwrk04 > button{
+    flex-grow: 1;
+}

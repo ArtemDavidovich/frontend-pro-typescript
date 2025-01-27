@@ -49,6 +49,7 @@ export default function FoodFacts(): JSX.Element {
 
   useEffect(() => {
     getFoodFact();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -60,11 +61,11 @@ export default function FoodFacts(): JSX.Element {
           alt={product.title}
         />
       </div>
+      <h2>{product.title}</h2>
       <h2>
-        {product.title}
+        {product.brands} - {product.product_quantity}{" "}
+        {product.product_quantity_unit}
       </h2>
-      <h2>{product.brands} - {product.product_quantity}{" "}
-      {product.product_quantity_unit}</h2>
       <button
         className={style.btnFoodFacts}
         type="button"

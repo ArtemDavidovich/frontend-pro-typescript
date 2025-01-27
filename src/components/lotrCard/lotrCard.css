@@ -1,0 +1,66 @@
+.flexContainerHomework05 {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .heroGridContainerHomework05 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    place-items: center;
+  }
+  
+  .heroCardHomework05 {
+    padding: 10px 40px 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 6px;
+    background-image: url("https://i.ebayimg.com/images/g/5NAAAOSwyAxg5ZUl/s-l1200.jpg");
+  }
+  
+  .heroCardHomework05 > h2 {
+    border-radius: 10px;
+    background-color: rgba(253, 253, 253, 0.6);
+  }
+  
+  .heroCardHomework05 > p {
+    border-radius: 10px;
+    background-color: rgba(253, 253, 253, 0.6);
+  }
+  
+  .heroCardWrapperHomework05 {
+    height: 300px;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  
+  
+  .heroLightHomework05 {
+    border: 2px solid rgb(68, 125, 231);
+    box-shadow: 0 4px 8px rgba(68, 125, 231, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .heroDarkHomework05 {
+    border: 2px solid rgb(250, 82, 90);
+    box-shadow: 0 4px 8px rgba(68, 125, 231, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .heroLightHomework05:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(68, 125, 231);
+  }
+
+  .heroDarkHomework05:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(250, 82, 90);
+  }
+
+  .heroCardWrapperHomework05 > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+  }
+
+  

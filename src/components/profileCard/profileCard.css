@@ -1,0 +1,40 @@
+/* body{
+    background-color: #FF9843;
+} */
+
+.profileCard > p {
+    margin: 0px;
+}
+
+.profileCard > h2 {
+    text-decoration: underline;
+}
+
+.profileCardBackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profileCardBackground:hover {
+    transform: scale(1.1); /* Увеличение на 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Эффект тени для красоты */
+}
+
+.profileCardContainer {
+    width: 500px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://img.freepik.com/premium-vector/narutomaki-seamless-pattern_109706-137.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+}
