@@ -17,7 +17,7 @@
     max-height: 700px;
     overflow-y: auto;
     scroll-behavior: smooth;     
-       
+    padding: 10px;   
 }
 
 .catCard{
@@ -33,10 +33,18 @@
     margin-bottom: 10px;
     padding: 10px;
     background-color: rgb(231, 202, 207);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
+
+.catCard:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(250, 82, 90, 0.5);
+}
+
 .imageWrapper{
     height: 200px;
 }
+
 .imageWrapper > img{
     height: 100%;
     width: 100%;
@@ -53,7 +61,26 @@
 }
 
 .btn{
-    background-color: rgb(252, 172, 185);
     width: 200px;
-    color: rgb(69, 9, 97);
+    
+}
+
+.btnShow{
+    background-color: rgb(252, 172, 185);   
+    color: rgb(69, 9, 97);        
+}
+
+.btnShow:hover{
+    background-color: rgb(250, 125, 146);
+    color: rgb(96, 14, 134);    
+}
+
+.btnClear{
+    background-color: rgb(136, 136, 136);    
+    color: rgb(101, 73, 114);
+}
+
+.btnClear:hover{
+    background-color: rgb(94, 93, 93);
+    color: rgb(146, 108, 163);
 }

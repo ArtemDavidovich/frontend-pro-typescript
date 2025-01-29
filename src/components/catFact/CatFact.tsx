@@ -51,12 +51,12 @@ export default function CatFact(): JSX.Element {
   return (
     <div className={styles.superMainContainer}>
           <div className={styles.btnContainer}>
-            <button className={styles.btn} onClick={handleFetchCat}>
+            <button className={cn(styles.btn, styles.btnShow)} onClick={handleFetchCat}>
               Get New Cat Fact
             </button>
             {cat.length > 0 ? (
-            <button className={styles.btn} onClick={clearCats}>
-              Good Bye Cats
+            <button className={cn(styles.btn, styles.btnClear)} onClick={clearCats}>
+              Good Bye Cats :(
             </button>) : (<></>)}
           </div>
               
@@ -67,7 +67,7 @@ export default function CatFact(): JSX.Element {
           <div className={styles.mainContainer}>
             {cat.map((element) => (
               <>
-                <div className={styles.catCard}>
+                <div className={styles.catCard} key={element.fact}>
                   <p>{element.fact}</p>
                   <div className={styles.imageWrapper}>
                     <img src={element.url} alt="cat-photo" />
