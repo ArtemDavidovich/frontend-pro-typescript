@@ -53,11 +53,11 @@ export default function CatFact(): JSX.Element {
     <div className={styles.superMainContainer}>
           <div className={styles.btnContainer}>
             <button className={cn(styles.btn, styles.btnShow)} onClick={handleFetchCat}>
-              Get New Cat Fact
+              Get New Cat Fact :)
             </button>
             {cat.length > 0 ? (
             <button className={cn(styles.btn, styles.btnClear)} onClick={clearCats}>
-              Good Bye Cats :(
+              Good Bye Cats :( 
             </button>) : (<></>)}
           </div>
               
