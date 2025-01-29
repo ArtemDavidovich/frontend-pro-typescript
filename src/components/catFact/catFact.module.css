@@ -1,86 +1,94 @@
-.superMainContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 10px;
+.superMainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 10px;
 }
 
-.mainContainer{    
-    display: flex;
-    flex-direction: column;    
-    padding: 0px;    
-    width: 100%;
-    max-height: 700px;
-    overflow-y: auto;
-    scroll-behavior: smooth;     
-    padding: 10px;   
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  width: 100%;
+  max-height: 700px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
 }
 
-.catCard{
-    color: rgb(69, 9, 97);
-    width: 500px;
-    border: 3px solid rgb(252, 172, 185);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 25px;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: rgb(231, 202, 207);
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
+.catCard {
+  color: rgb(69, 9, 97);
+  width: 500px;
+  border: 3px solid rgb(252, 172, 185);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgb(231, 202, 207);
+  transition: box-shadow 0.3s ease, border 0.3s ease;
 }
 
-.catCard:hover{
-    transform: scale(1.03);
-    box-shadow: 0 4px 8px rgba(250, 82, 90, 0.5);
+.catCard:hover {
+    /* box-shadow: 0px 0px 25px 5px rgba(250, 82, 90, 0.5); */
+    /* outline: 3px solid rgb(250, 125, 146); */
+    border: 3px solid rgb(250, 125, 146);
+    animation: glow 0.4s infinite alternate ease-in-out;  
 }
 
-.imageWrapper{
-    height: 200px;
+@keyframes glow {
+    0% { box-shadow: 0 0 3px 2px rgba(250, 125, 146, 0.6); }   
+    50% { box-shadow: 0 0 7px 4px rgba(250, 125, 146, 0.8); }    
+    100% { box-shadow: 0 0 11px 6px rgba(250, 125, 146, 1); }    
+  }
+  
+.imageWrapper {
+  height: 200px;
 }
 
-.imageWrapper > img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.imageWrapper > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.btnContainer{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 10px 0;
+.btnContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
 }
 
-.btn{
-    width: 200px;
-    
+.btn {
+  width: 200px;
 }
 
-.btnShow{
-    background-color: rgb(252, 172, 185);   
-    color: rgb(69, 9, 97);        
+.btnShow {
+  background-color: rgb(252, 172, 185);
+  color: rgb(69, 9, 97);
 }
 
-.btnShow:hover{
-    background-color: rgb(250, 125, 146);
-    color: rgb(96, 14, 134);    
+.btnShow:hover {
+  background-color: rgb(250, 125, 146);
+  color: rgb(96, 14, 134);
 }
 
-.btnClear{
-    background-color: rgb(136, 136, 136);    
-    color: rgb(101, 73, 114);
+.btnClear {
+  background-color: rgb(136, 136, 136);
+  color: rgb(101, 73, 114);
 }
 
-.btnClear:hover{
-    background-color: rgb(94, 93, 93);
-    color: rgb(146, 108, 163);
+.btnClear:hover {
+  background-color: rgb(94, 93, 93);
+  color: rgb(146, 108, 163);
 }
+

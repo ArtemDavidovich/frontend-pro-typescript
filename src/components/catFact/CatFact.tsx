@@ -46,6 +46,7 @@ export default function CatFact(): JSX.Element {
 
   useEffect(() => {
     handleFetchCat();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
