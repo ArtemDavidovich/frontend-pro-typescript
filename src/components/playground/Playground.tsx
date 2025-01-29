@@ -12,7 +12,7 @@ export default function Playground(): JSX.Element {
     setNumberOfBirds(numberOfBirds + 1);
   }
 
-  // ! Component lifcycle - жизненный цикл компонента
+  // ! Component lifecycle - жизненный цикл компонента
   // Этапы жизненого цикла:
   // Mount - первая отрисовка компонента на странице
   // Update - изменение
