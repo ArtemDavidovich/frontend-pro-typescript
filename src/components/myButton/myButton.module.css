@@ -1,7 +1,7 @@
 .myButton {
   padding: 10px;
-  margin: 10
-  px;
+  margin: 10px;
+  min-width: 100px;
 }
 
 .primary {
@@ -29,4 +29,8 @@
 .disabled:hover {
   background-color: gray;
   cursor: not-allowed;
+}
+
+.hidden{
+  display: none;
 }

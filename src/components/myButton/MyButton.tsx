@@ -13,6 +13,7 @@ interface IMyButtonProps {
   //  активная ли кнопка
   disabled?: boolean;
   variant?: "primary" | "danger";
+  hidden?: boolean;
 }
 
 export default function MyButton({
@@ -21,6 +22,7 @@ export default function MyButton({
   type = "button",
   disabled = false,
   variant,
+  hidden = false,
 }: IMyButtonProps) {
   return (
     <button
@@ -30,6 +32,7 @@ export default function MyButton({
         [styles.primary]: variant === "primary",
         [styles.danger]: variant === "danger",
         [styles.disabled]: disabled === true,
+        [styles.hidden]: hidden === true,
       })}
     >
       {text}

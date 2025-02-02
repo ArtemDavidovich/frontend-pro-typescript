@@ -2,15 +2,17 @@
     border: 1px solid #0080FB;
     border-radius: 20px;
     padding: 20px;
-    background-color: rgba(2, 42, 101, 0.7);
+    background-color: rgba(2, 42, 101, 0.5);
     font-weight: bold;
     color: antiquewhite;
+    width: fit-content;
 }
 
 .labelHmwrk03{
     display: flex;
     justify-content: space-between;
     min-width: 275px;
+    height: 30px;
 }
 
 .inputHmwrk03{

@@ -1,0 +1,24 @@
+.artem > p {
+    margin: 0px;
+}
+
+.artem > h2 {
+    text-decoration: underline;
+}
+
+.artem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 700px;
+    background-image: url(https://t3.ftcdn.net/jpg/10/64/42/98/360_F_1064429801_boQbn13PTZmYsqgLCS9w9tGYheHZGnnz.jpg);
+    border-radius: 25px;
+}
+
+.artemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}

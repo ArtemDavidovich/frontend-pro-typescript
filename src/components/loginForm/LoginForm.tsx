@@ -1,13 +1,13 @@
 import MyButton from "../myButton/MyButton";
 import MyInput from "../myInput/MyInput";
-import './loginForm.css'
+import styles from './loginForm.module.css'
 
 
 export default function LoginForm(): JSX.Element {   
 
     return(
-        <form className="formContainerHmwrk03">
-        <div className="regFormHmwrk03">
+        <form className={styles.formContainerHmwrk03}>
+        <div className={styles.regFormHmwrk03}>
         <MyInput name={'login'} type={'text'} label={'Login: '} />
         <br />
         <MyInput name={'e-mail'} type={'email'} label={'E-mail: '} />
@@ -15,8 +15,8 @@ export default function LoginForm(): JSX.Element {
         <MyInput name={'password'} type={'password'} label={'Password: '} />
         <br />
         </div>
-        <MyButton text={'Submit'} type={'submit'} />        
-        <MyButton text={'Reset'} type={'reset'} />        
+        <MyButton text={'Submit'} type={'submit'} variant="primary"/>        
+        <MyButton text={'Reset'} type={'reset'} variant="danger"/>        
         </form>
     );
 };

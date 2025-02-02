@@ -1,0 +1,75 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid;
+    border-radius: 25px;
+    padding: 10px 25px;
+    background-color: rgba(169, 169, 169, 0.45);
+}
+
+.formContainer{
+    margin-left: 10px;
+}
+
+.listContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;        
+}
+
+.olShow{
+    border: 1px solid;
+    border-radius: 15px;
+    width: 100%;
+    padding: 8px 20px;        
+    margin: 0;       
+}
+
+.elementHidden{
+    display: none;
+}
+
+.scrollWrapper {
+    width: calc(100% + 20px); /* Increase width slightly to fit the scrollbar */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 250px;
+    padding-right: 20px; /* Move content away from scrollbar */
+}
+
+.listContainer p{
+    text-align: left;
+    list-style-position: inside; /* Keeps the numbers aligned with the text */
+    margin-bottom: 5px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+.liMale{
+    background-color: rgb(0, 225, 255, 0.5);
+}
+
+.liMale::before{
+    content: '🧑';
+    margin-right: 10px;
+}
+
+.liFemale::before{
+    content: '👧';
+    margin-right: 10px;
+}
+
+.liFemale{
+    background-color: rgb(255, 0, 140, 0.5);
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.formContainer input{
+    height: 45px;    
+}

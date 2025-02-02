@@ -1,4 +1,5 @@
-import './lotrCard.css'
+import styles from './lotrCard.module.css'
+import cn from 'classnames'
 
 interface IHero {
   id: number;
@@ -15,16 +16,13 @@ interface IHeroArray {
 
 export default function LotrCard({ array }: IHeroArray): JSX.Element {
   return (
-    <div>
-      <h1>Lord of the Rings Characters</h1>
-      <div className="heroGridContainerLesson05">
+      
+      <div className={styles.heroGridContainerHomework05}>
         {array.map((hero) => (
-          <div className="heroCardHomework05" key={hero.id}>
+          <div className={styles.heroCardHomework05} key={hero.id}>
             <h2>{hero.name}</h2>
             <div
-              className={`heroCardWrapperHomework05 ${
-                hero.isDark ? "heroDarkHomework05" : "heroLightHomework05"
-              }`}
+              className={cn(styles.heroCardWrapperHomework05, hero.isDark ? styles.heroDarkHomework05 : styles.heroLightHomework05)}
             >
               <img src={hero.image} alt={hero.name} />
             </div>
@@ -38,8 +36,7 @@ export default function LotrCard({ array }: IHeroArray): JSX.Element {
             </p>
           </div>
         ))}
-      </div>
-    </div>
+      </div>    
   );
 }
 

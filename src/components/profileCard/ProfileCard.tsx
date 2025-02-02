@@ -1,6 +1,6 @@
-import "./profileCard.css";
+import styles from './profileCard.module.css';
 
-interface ICharacterCard {
+export interface ICharacterCard {
   image: string;
   name: string;
   profession: string;
@@ -9,9 +9,10 @@ interface ICharacterCard {
 
 export default function ProfileCard({ image, name, profession, hobby }: ICharacterCard) {
   return (
-    <div className="profileCardContainer">
-      <div className="profileCardBackground">
-        <div className="profileCard">
+    
+    <div className={styles.profileCardContainer}>
+      <div className={styles.profileCardBackground}>
+        <div className={styles.profileCard}>
           <img src={image} height={300} alt={name} />
           <h2>{name}</h2>
           <h3>Profession: </h3>
@@ -21,5 +22,6 @@ export default function ProfileCard({ image, name, profession, hobby }: ICharact
         </div>
       </div>
     </div>
+    
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MyButton from "../myButton/MyButton";
-import "./feedback.css";
+import styles from './feedback.module.css'
 
 export default function Feedback(): JSX.Element {
   const [like, setLike] = useState<number>(0);
@@ -20,14 +20,14 @@ export default function Feedback(): JSX.Element {
   };
 
   return (
-    <div className="containerHmwrk04">
+    <div className={styles.containerHmwrk04}>
       <h1>Rating counter</h1>
-      <div className="divHmwrk04">
+      <div className={styles.divHmwrk04}>
         <h2>{like}</h2>
-        <MyButton text={"Like"} type={"button"} func={handleLike} />
+        <MyButton text={"Like"} type={"button"} func={handleLike} variant="primary"/>
       </div>
-      <div className="divHmwrk04">
-        <MyButton text={"Dislike"} type={"button"} func={handleDislike} />
+      <div className={styles.divHmwrk04}>
+        <MyButton text={"Dislike"} type={"button"} func={handleDislike} variant="danger"/>
         <h2>{dislike}</h2>
       </div>
       <MyButton text={"Reset Results"} type={"button"} func={handleReset} />

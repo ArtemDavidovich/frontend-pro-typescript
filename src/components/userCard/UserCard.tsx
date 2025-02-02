@@ -1,9 +1,9 @@
 import './userCard.css'
 
 interface IUser {
-    name: string;
-    age: number;
-    hobby: string
+    name?: string;
+    age?: number;
+    hobby?: string
 }
 
 export default function UserCard({name, age, hobby}: IUser): JSX.Element{
