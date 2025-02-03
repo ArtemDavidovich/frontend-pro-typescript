@@ -21,7 +21,7 @@ export default function MyButton({
   func,
   type = "button",
   disabled = false,
-  variant,
+  variant = 'primary',
   hidden = false,
 }: IMyButtonProps) {
   return (

@@ -15,7 +15,7 @@ import NoPage from "./components/noPage/NoPage";
 import HomePage from "./components/homePage/HomePage";
 import HomeworkPage from "./components/homeworkPage/HomeworkPage";
 import ConsultationPage from "./components/consultationPage/ConsultationPage";
-import Consultation05 from "./consultations/consultation04/Consultation05";
+import Consultation05 from "./consultations/consultation05/Consultation05";
 import Lesson03 from "./lessons/lesson03_react_props/Lesson03";
 import Lesson02 from "./lessons/lesson02_react_components/Lesson02";
 import Lesson01 from "./lessons/lesson01_react_intro/Lesson01";
@@ -28,6 +28,7 @@ import Homework06 from "./homeworks/homework06/Homework06";
 import Homework04 from "./homeworks/homework04/Homework04";
 import Homework09 from "./homeworks/homework09/Homework09";
 import Homework05 from "./homeworks/homework05/Homework05";
+import Lesson13 from "./lessons/lesson13/Lesson13";
 
 
 
@@ -55,6 +56,8 @@ export default function App(): JSX.Element {
           <Route path='lesson-10' element={<Lesson10/>} />
           <Route path='lesson-11' element={<Lesson11/>} />
           <Route path='lesson-12' element={<Lesson12/>} />
+          <Route path='lesson-13' element={<Lesson13/>} />
+          <Route path='lesson-13' element={<Lesson13/>} />
 
           <Route path='homework-01' element={<Homework01/>} />          
           <Route path='homework-02' element={<Homework02/>} />          
