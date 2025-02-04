@@ -48,14 +48,7 @@ export default function FormRegistration(): JSX.Element {
       console.log(values);
       resetForm();
     },
-  });
-
-  //   function clearAll(): void{
-  //     formik.values.username = '';
-  //     formik.values.email = '';
-  //     formik.values.password = '';
-  //     formik.values.confirmPassword = ''
-  //   }
+  });    
 
   return (
     <div className={styles.mainContainer}>
@@ -109,7 +102,7 @@ export default function FormRegistration(): JSX.Element {
         </span>
         <div className={styles.loginFormButton}>
           <MyButton type="submit" text="Sign up" />
-          {/* <MyButton variant="danger" type="reset" text="Reset" func={clearAll}/> */}
+          <MyButton variant="danger" type="reset" text="Reset" func={formik.resetForm}/>
         </div>
         <span className={styles.spanLink}>
           <Link to="/login-form">
