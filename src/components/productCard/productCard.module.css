@@ -1,0 +1,32 @@
+.shopContainerCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #213547;
+    border-radius: 10px;
+    padding: 10px 6px 20px;
+}
+
+.shopContainerCard:hover{
+    border: 2px solid #e68524 ;
+}
+
+.shopContainerCard h4{
+    color: #213547;
+}
+
+.shopContainerCard p{
+    color: #213547;
+}
+
+.imageWrapper{
+    width: 100%;
+    height: 300px;
+}
+
+.imageWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

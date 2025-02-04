@@ -1,8 +1,8 @@
 .loader {
     width: 48px;
     height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: #FFB900;
+    border: 5px solid #797575;
+    /* border-bottom-color: #797575; */
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;

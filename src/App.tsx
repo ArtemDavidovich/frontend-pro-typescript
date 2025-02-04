@@ -32,6 +32,8 @@ import Lesson13 from "./lessons/lesson13/Lesson13";
 import Homework10 from "./homeworks/homework10/Homework10";
 import FormLogin from "./components/formLogin/FormLogin";
 import FormRegistration from "./components/formRegistration/FormRegistration";
+import Lesson14 from "./lessons/lesson14/Lesson14";
+import ProductPage from "./components/productPage/ProductPage";
 
 
 
@@ -61,6 +63,8 @@ export default function App(): JSX.Element {
           <Route path='lesson-12' element={<Lesson12/>} />
           <Route path='lesson-13' element={<Lesson13/>} />
           <Route path='lesson-13' element={<Lesson13/>} />
+          <Route path='lesson-14' element={<Lesson14/>} />
+          <Route path='lesson-14/:id/' element={<ProductPage/>} />
 
           <Route path='homework-01' element={<Homework01/>} />          
           <Route path='homework-02' element={<Homework02/>} />          
