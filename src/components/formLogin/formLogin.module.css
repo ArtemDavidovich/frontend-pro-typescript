@@ -1,0 +1,43 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    padding: 5px 30px;
+    border: 1px solid;
+    border-radius: 25px;
+    background-color: rgba(138, 43, 226, 0.3);
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.divLink{
+    color: black;
+    font-size: small;
+}
+
+.divLink:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.divInput{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.divInput > p{
+    font-size: medium;
+    margin: 0;
+}
+
+.errorMessage{
+    color: red;
+    font-size: small;
+    margin-bottom: 5px;
+}

@@ -29,6 +29,9 @@ import Homework04 from "./homeworks/homework04/Homework04";
 import Homework09 from "./homeworks/homework09/Homework09";
 import Homework05 from "./homeworks/homework05/Homework05";
 import Lesson13 from "./lessons/lesson13/Lesson13";
+import Homework10 from "./homeworks/homework10/Homework10";
+import FormLogin from "./components/formLogin/FormLogin";
+import FormRegistration from "./components/formRegistration/FormRegistration";
 
 
 
@@ -68,11 +71,17 @@ export default function App(): JSX.Element {
           <Route path='homework-07' element={<Homework07/>} />
           <Route path='homework-08' element={<Homework08/>} />
           <Route path='homework-09' element={<Homework09/>} />
+          <Route path='homework-10' element={<Homework10/>} />
 
           <Route path='consultation-04' element={<Consultation04/>} />
           <Route path='consultation-05' element={<Consultation05/>} />
 
           <Route path='*' element={<NoPage/>} />
+
+          {/* different stuff */}
+          <Route path='login-form' element={<FormLogin/>} />
+          <Route path='registration-form' element={<FormRegistration/>} />
+
         </Route>
       </Routes>      
     </HashRouter>
