@@ -14,6 +14,7 @@ export default function HomeworkPage() {
         <Link to='/homework-08'><div>Homework 8</div></Link>
         <Link to='/homework-09'><div>Homework 9</div></Link>
         <Link to='/homework-10'><div>Homework 10</div></Link>
+        <Link to='/homework-11'><div>Homework 11</div></Link>
       </div>    
   );
 }

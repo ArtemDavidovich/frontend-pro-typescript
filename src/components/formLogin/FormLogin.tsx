@@ -57,7 +57,7 @@ export default function FormLogin(): JSX.Element {
         <span className={styles.errorMessage}>{formik.errors.password}</span>
         <div className={styles.loginFormButton}>
           <MyButton type="submit" text="Login" />
-          {/* <MyButton variant="danger" type="reset" text="Reset" /> */}
+          <MyButton variant="danger" type="reset" text="Reset" func={formik.resetForm}/>
         </div>
         <span className={styles.spanLink}>
           <Link to="/registration-form">

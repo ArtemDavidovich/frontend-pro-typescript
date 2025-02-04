@@ -1,5 +1,44 @@
-.mainContainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));    
-    gap: 10px;
+body{
+    background-color: rgba(206, 103, 0, 0.35);
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;  
+}
+
+form button {
+  padding: 5px !important;
+  margin: 0 10px !important;
+}
+
+form input {
+    width: 50px;
+    font-size: larger; 
+    text-align: center; 
+}
+
+.inputContainer {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+form span{
+    color: red;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  width: 100%; 
 }

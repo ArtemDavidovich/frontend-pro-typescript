@@ -34,6 +34,7 @@ import FormLogin from "./components/formLogin/FormLogin";
 import FormRegistration from "./components/formRegistration/FormRegistration";
 import Lesson14 from "./lessons/lesson14/Lesson14";
 import ProductPage from "./components/productPage/ProductPage";
+import Homework11 from "./homeworks/homework11/Homework11";
 
 
 
@@ -76,6 +77,7 @@ export default function App(): JSX.Element {
           <Route path='homework-08' element={<Homework08/>} />
           <Route path='homework-09' element={<Homework09/>} />
           <Route path='homework-10' element={<Homework10/>} />
+          <Route path='homework-11' element={<Homework11/>} />
 
           <Route path='consultation-04' element={<Consultation04/>} />
           <Route path='consultation-05' element={<Consultation05/>} />

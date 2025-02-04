@@ -33,15 +33,17 @@ export default function ProductPage(): JSX.Element {
   return (
     <div className={styles.mainContainer}>
       {product.title ? (
-        <>
+        <div className={styles.productContainer}>
           <h3>{product.title}</h3>
           <p>{product.description}</p>
           <img width={200} src={product.image} alt="" />
           <p>Price: {product.price}€</p>
           <div>
-            <Link to="/lesson-14">back to main page</Link>
+            <Link to="/lesson-14">
+              <span className={styles.spanContainer}>back to main page</span>
+            </Link>
           </div>
-        </>
+        </div>
       ) : (
         <Loader />
       )}
