@@ -3,6 +3,8 @@ import styles from "./productPage.module.css";
 import { useEffect, useState } from "react";
 import { IProduct } from "../products/types/types";
 import Loader from "../loader/Loader";
+import { useCart } from "../../context/CartContext";
+import MyButton from "../myButton/MyButton";
 
 const initialProduct: IProduct = {
   id: 0,
@@ -22,6 +24,8 @@ export default function ProductPage(): JSX.Element {
 
   const { id } = useParams();
 
+  const { addToCart } = useCart();
+
   useEffect(() => {
     setTimeout(() => {
       fetch(`https://fakestoreapi.com/products/${id}`)
@@ -38,6 +42,18 @@ export default function ProductPage(): JSX.Element {
           <p>{product.description}</p>
           <img width={200} src={product.image} alt="" />
           <p>Price: {product.price}€</p>
+          <MyButton
+            func={() =>
+              addToCart({
+                id: product.id,
+                title: product.title,
+                image: product.image,
+                price: product.price,
+                quantity: 1,
+              })
+            }
+            text="Add to cart"
+          />
           <div>
             <Link to="/products">
               <span className={styles.spanContainer}>back to main page</span>

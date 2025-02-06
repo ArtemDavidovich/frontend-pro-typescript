@@ -17,8 +17,8 @@ export default function LoginForm(): JSX.Element {
     }); 
 
     return(
-        <form className={styles.formContainerHmwrk03}>
-        <div className={styles.regFormHmwrk03}>
+        <form>
+        <div>
         <MyInput formik={formik} name={'login'} type={'text'} label={'Login: '} />
         <br />
         <MyInput formik={formik} name={'e-mail'} type={'email'} label={'E-mail: '} />

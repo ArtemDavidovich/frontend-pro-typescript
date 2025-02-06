@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-           
+    justify-content: center;           
 }
 
 .cartContainer{
@@ -11,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;    
-    width: 430px;
+    min-width: 440px;
     border: 2px solid;
     border-radius: 25px;
     background-color: white; 
@@ -30,11 +29,6 @@
     gap: 10px;
     margin: 5px 0;
     padding: 10px;    
-}
-
-.itemContainer > button{    
-    padding: 0;
-    background-color: transparent;
 }
 
 .imageWrapper{
@@ -62,10 +56,15 @@
 
 .quantityWrapper{
     gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .quantityWrapper > button{
     padding: 0;
+    background-color: transparent;
+    min-width: 20px;    
 }
 
 .pWrapper{
@@ -88,7 +87,7 @@
 }
 
 .priceDelContainer > button{    
-    padding: 0;
+    padding: 0;    
     background-color: transparent;    
 }
 
