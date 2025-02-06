@@ -39,7 +39,7 @@ export default function ProductPage(): JSX.Element {
           <img width={200} src={product.image} alt="" />
           <p>Price: {product.price}€</p>
           <div>
-            <Link to="/lesson-14">
+            <Link to="/products">
               <span className={styles.spanContainer}>back to main page</span>
             </Link>
           </div>

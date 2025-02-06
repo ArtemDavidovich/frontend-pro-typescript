@@ -35,12 +35,17 @@ import FormRegistration from "./components/formRegistration/FormRegistration";
 import Lesson14 from "./lessons/lesson14/Lesson14";
 import ProductPage from "./components/productPage/ProductPage";
 import Homework11 from "./homeworks/homework11/Homework11";
+import { CartProvider } from "./context/CartContext";
+import Cart from "./components/cart/Cart";
+import Products from "./components/products/Products";
 
 
 
 export default function App(): JSX.Element {
   return (
-    // оборачиваем все приложение в компонент HashRouter из библиотеки React Router
+    // обернули все приложение в компонент-обертку CartProvider
+    <CartProvider>
+    {/* оборачиваем все приложение в компонент HashRouter из библиотеки React Router */}
     <HashRouter>
       {/* импортируем компонент Routes (пути) вокруг всех компонентов приложения */}
       <Routes>
@@ -49,6 +54,9 @@ export default function App(): JSX.Element {
           <Route path='/' element={<HomePage/>} />          
           <Route path='homework-page' element={<HomeworkPage/>} />          
           <Route path='consultation-page' element={<ConsultationPage/>} />
+          <Route path='products' element={<Products/>} />
+          <Route path='products/:id/' element={<ProductPage/>} />
+          <Route path='cart' element={<Cart/>} />
 
           <Route path='lesson-01' element={<Lesson01/>} />
           <Route path='lesson-02' element={<Lesson02/>} />
@@ -65,7 +73,6 @@ export default function App(): JSX.Element {
           <Route path='lesson-13' element={<Lesson13/>} />
           <Route path='lesson-13' element={<Lesson13/>} />
           <Route path='lesson-14' element={<Lesson14/>} />
-          <Route path='lesson-14/:id/' element={<ProductPage/>} />
 
           <Route path='homework-01' element={<Homework01/>} />          
           <Route path='homework-02' element={<Homework02/>} />          
@@ -77,19 +84,20 @@ export default function App(): JSX.Element {
           <Route path='homework-08' element={<Homework08/>} />
           <Route path='homework-09' element={<Homework09/>} />
           <Route path='homework-10' element={<Homework10/>} />
-          <Route path='homework-11' element={<Homework11/>} />
+          <Route path='homework-11' element={<Homework11/>} />          
 
           <Route path='consultation-04' element={<Consultation04/>} />
           <Route path='consultation-05' element={<Consultation05/>} />
 
           <Route path='*' element={<NoPage/>} />
 
-          {/* different stuff */}
+          {/* different staff */}
           <Route path='login-form' element={<FormLogin/>} />
           <Route path='registration-form' element={<FormRegistration/>} />
 
         </Route>
       </Routes>      
     </HashRouter>
+    </CartProvider>
   );
 }

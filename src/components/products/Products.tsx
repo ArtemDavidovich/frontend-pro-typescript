@@ -6,16 +6,21 @@ import Loader from "../loader/Loader";
 import { useFormik } from "formik";
 import MyButton from "../myButton/MyButton";
 import * as Yup from "yup";
+import { useCart } from "../../context/CartContext";
+import Cart from "../cart/Cart";
 
 const schema = Yup.object().shape({
-  numberOfItems: Yup.number().typeError('only digits acceptable')
-    .integer("must be an integer")    
+  numberOfItems: Yup.number()
+    .typeError("only digits acceptable")
+    .integer("must be an integer")
     .min(1, "minimum 1 item")
     .max(20, "maximum 20 items"),
 });
 
 export default function Products(): JSX.Element {
-  const [products, setProducts] = useState<IProduct[]>([]);
+  const { addToCart } = useCart();
+
+  const [products, setProducts] = useState<IProduct[]>([]);  
 
   const getProducts = async (): Promise<void> => {
     const res = await fetch("https://fakestoreapi.com/products");
@@ -50,8 +55,10 @@ export default function Products(): JSX.Element {
   }, []);
 
   return (
+    <div className='lessonContainer'>
+    <Cart />
     <div className={styles.mainContainer}>
-      <form onSubmit={formik.handleSubmit}>
+      <form className={styles.formProducts} onSubmit={formik.handleSubmit}>
         <h2>Number of Items to show</h2>
         <div className={styles.inputContainer}>
           <input
@@ -70,19 +77,35 @@ export default function Products(): JSX.Element {
         {products.length > 0 ? (
           <>
             {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                id={product.id}
-                title={product.title}
-                price={product.price}
-                image={product.image}
-              />
+              <div className={styles.cardContainer}>
+                <ProductCard
+                  key={product.id}
+                  id={product.id}
+                  title={product.title}
+                  price={product.price}
+                  image={product.image}
+                />
+                <button
+                  onClick={() =>
+                    addToCart({
+                      id: product.id,
+                      title: product.title,
+                      image: product.image,
+                      price: product.price,
+                      quantity: 1,
+                    })
+                  }
+                >
+                  Add to cart
+                </button>
+              </div>
             ))}
           </>
         ) : (
           <Loader />
         )}
       </div>
+    </div>
     </div>
   );
 }
