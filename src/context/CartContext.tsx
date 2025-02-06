@@ -19,9 +19,13 @@ interface ICartContextType {
   addToCart: (product: ICartItem) => void;
   // удаление элемента из корзины
   removeFromCart: (id: number) => void;
+  // удаление одной штуки конкретного товара
+  removeOneItem: (id: number) => void;
   // очистка корзины
   clearCart: () => void;
+  // общая стоимость товаров
   totalPrice: number;
+  
 }
 
 // * 1 создаем контекст c помощью встроенного в react метода createContext() и передаем начальное значение
@@ -52,7 +56,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
       return [...prevCart, { ...product, quantity: 1 }];
     });
 
-    setTotalPrice((prevPrice) => prevPrice + product.price);
+    setTotalPrice((prevPrice) => parseFloat((prevPrice + product.price).toFixed(2)));
   };
 
   const removeFromCart = (id: number) => {
@@ -64,11 +68,38 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
     setTotalPrice((prevPrice) => {
       const removedProduct = cart.find((product) => product.id === id);
-      return removedProduct 
-      ? parseFloat((prevPrice - removedProduct.price * removedProduct.quantity).toFixed(2)) 
-      : prevPrice;
+      return removedProduct
+        ? parseFloat(
+            (
+              prevPrice -
+              removedProduct.price * removedProduct.quantity
+            ).toFixed(2)
+          )
+        : prevPrice;
     });
   };
+
+  const removeOneItem = (id: number) => {
+    setCart((prevCart) => {      
+      return prevCart.map((item) =>
+        item.id === id && item.quantity > 0
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      ).filter((item) => item.quantity > 0);
+    })
+
+    setTotalPrice((prevPrice) => {
+      const removedItem = cart.find((product) => product.id === id);
+      return removedItem
+        ? parseFloat(
+            (
+              prevPrice -
+              removedItem.price
+            ).toFixed(2)
+          )
+        : prevPrice;
+    })
+  }
 
   const clearCart = () => {
     setCart([]);
@@ -77,7 +108,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart, totalPrice }}
+      value={{ cart, addToCart, removeFromCart, removeOneItem, clearCart, totalPrice }}
     >
       {/* вместо children придут обернутые компоненты */}
       {children}

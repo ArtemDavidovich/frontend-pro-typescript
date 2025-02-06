@@ -1,0 +1,20 @@
+.inputStyle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 275px;    
+}
+
+.inputHmwrk03{
+    border-radius: 3px;    
+    border: 1px solid #0080fb;
+    background-color: rgba(0, 128, 251, 0.5);   
+}
+
+.inputHmwrk03::placeholder{
+    color: antiquewhite;    
+}
+
+.errorText {
+    color: red;
+  }

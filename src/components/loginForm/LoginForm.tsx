@@ -1,18 +1,29 @@
+import { useFormik } from "formik";
 import MyButton from "../myButton/MyButton";
 import MyInput from "../myInput/MyInput";
-import styles from './loginForm.module.css'
 
 
-export default function LoginForm(): JSX.Element {   
+export default function LoginForm(): JSX.Element {  
+    const formik = useFormik({
+      initialValues: {
+        email: '',
+        password: ''
+      } as { email: string; password: string },
+      validateOnChange: false,
+      onSubmit: (values, { resetForm }) => {
+        console.log(values);
+        resetForm();
+      }
+    }); 
 
     return(
         <form className={styles.formContainerHmwrk03}>
         <div className={styles.regFormHmwrk03}>
-        <MyInput name={'login'} type={'text'} label={'Login: '} />
+        <MyInput formik={formik} name={'login'} type={'text'} label={'Login: '} />
         <br />
-        <MyInput name={'e-mail'} type={'email'} label={'E-mail: '} />
+        <MyInput formik={formik} name={'e-mail'} type={'email'} label={'E-mail: '} />
         <br />
-        <MyInput name={'password'} type={'password'} label={'Password: '} />
+        <MyInput formik={formik} name={'password'} type={'password'} label={'Password: '} />
         <br />
         </div>
         <MyButton text={'Submit'} type={'submit'} variant="primary"/>        

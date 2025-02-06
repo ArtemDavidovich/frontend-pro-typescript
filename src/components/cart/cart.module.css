@@ -11,21 +11,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;    
-    width: 300px;
+    width: 430px;
     border: 2px solid;
     border-radius: 25px;
     background-color: white; 
 }
 
+.quantityWrapper{
+    display: flex;
+}
+
 .itemContainer{
     display: flex;
-    height: 40px;
     align-items: center;
     justify-content: space-between;
+    height: 40px;
     width: 100%;
     gap: 10px;
     margin: 5px 0;
-    padding: 0 10px;    
+    padding: 10px;    
 }
 
 .itemContainer > button{    
@@ -35,8 +39,7 @@
 
 .imageWrapper{
     height: 40px;
-    width: 40px;
-    
+    flex: 0 0 40px;    
 }
 
 .imageWrapper > img{
@@ -57,10 +60,40 @@
     width: 40px;
 }
 
+.quantityWrapper{
+    gap: 5px;
+}
+
+.quantityWrapper > button{
+    padding: 0;
+}
+
 .pWrapper{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;    
+}
+
+.priceDelContainer{
+    display: flex;
+    justify-content:flex-end;
+    gap: 10px;
+    align-items: center;    
+    min-width: 100px;
+}
+
+.priceDelContainer > p {    
+    text-align: right;
+}
+
+.priceDelContainer > button{    
+    padding: 0;
+    background-color: transparent;    
+}
+
+.pWrapper > p{
+    margin: 0;    
 }
 
 .totalPriceDiv{
@@ -72,4 +105,12 @@
 
 .cartContainer > h2{
     margin-bottom: 0;
+}
+
+.nameQuantContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-grow: 1;
 }

@@ -6,7 +6,6 @@ import Loader from "../loader/Loader";
 import { useFormik } from "formik";
 import MyButton from "../myButton/MyButton";
 import * as Yup from "yup";
-import { useCart } from "../../context/CartContext";
 import Cart from "../cart/Cart";
 
 const schema = Yup.object().shape({
@@ -17,8 +16,7 @@ const schema = Yup.object().shape({
     .max(20, "maximum 20 items"),
 });
 
-export default function Products(): JSX.Element {
-  const { addToCart } = useCart();
+export default function Products(): JSX.Element {  
 
   const [products, setProducts] = useState<IProduct[]>([]);  
 
@@ -84,20 +82,7 @@ export default function Products(): JSX.Element {
                   title={product.title}
                   price={product.price}
                   image={product.image}
-                />
-                <button
-                  onClick={() =>
-                    addToCart({
-                      id: product.id,
-                      title: product.title,
-                      image: product.image,
-                      price: product.price,
-                      quantity: 1,
-                    })
-                  }
-                >
-                  Add to cart
-                </button>
+                />                
               </div>
             ))}
           </>
