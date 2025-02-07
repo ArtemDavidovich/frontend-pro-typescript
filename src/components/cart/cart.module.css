@@ -5,15 +5,28 @@
     justify-content: center;           
 }
 
+
 .cartContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;    
     min-width: 440px;
-    border: 2px solid;
+    border: 2px solid black;
     border-radius: 25px;
-    background-color: white; 
+    background-color: rgb(0, 0, 0); 
+}
+
+.cartContainer > h2{
+    color: #c2c6c9;
+}
+
+.cartContainer > button:hover{
+    color: #c2c6c9 !important;
+}
+
+.totalPriceDiv > h3, p {
+    color: #c2c6c9;
 }
 
 .quantityWrapper{
@@ -64,7 +77,12 @@
 .quantityWrapper > button{
     padding: 0;
     background-color: transparent;
-    min-width: 20px;    
+    min-width: 20px;
+    color: #c2c6c9;    
+}
+
+.quantityWrapper > p{
+    color: #c2c6c9; 
 }
 
 .pWrapper{
@@ -92,7 +110,8 @@
 }
 
 .pWrapper > p{
-    margin: 0;    
+    margin: 0;
+    color: #c2c6c9;    
 }
 
 .totalPriceDiv{

@@ -39,7 +39,9 @@ import { CartProvider } from "./context/CartContext";
 import Cart from "./components/cart/Cart";
 import Products from "./components/products/Products";
 import Lesson16 from "./lessons/lesson16/Lesson16";
-
+import Lesson17 from "./lessons/lesson17/Lesson17";
+import Store from "./components/store/Store";
+import StorePage from "./components/storePage/StorePage";
 
 
 export default function App(): JSX.Element {
@@ -59,6 +61,12 @@ export default function App(): JSX.Element {
           <Route path='products/:id/' element={<ProductPage/>} />
           <Route path='cart' element={<Cart/>} />
 
+          <Route path='store' element={<Store/>} />
+          <Route path='store/:id/' element={<StorePage/>} />
+
+
+
+
           <Route path='lesson-01' element={<Lesson01/>} />
           <Route path='lesson-02' element={<Lesson02/>} />
           <Route path='lesson-03' element={<Lesson03/>} />
@@ -75,6 +83,7 @@ export default function App(): JSX.Element {
           <Route path='lesson-13' element={<Lesson13/>} />
           <Route path='lesson-14' element={<Lesson14/>} />
           <Route path='lesson-16' element={<Lesson16/>} />
+          <Route path='lesson-17' element={<Lesson17/>} />          
 
           <Route path='homework-01' element={<Homework01/>} />          
           <Route path='homework-02' element={<Homework02/>} />          

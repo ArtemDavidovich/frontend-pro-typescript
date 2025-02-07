@@ -1,0 +1,46 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #000000;
+    border-radius: 25px;
+    background-color: #000000;
+    color:#c2c6c9;
+}
+
+
+.mainContainer > p{
+    color: #c2c6c9;
+}
+
+.mainContainer:hover{
+    border: 3px solid #ffffff;    
+}
+
+.mainContainer > button{
+    background-color: #c2c6c9;
+}
+
+.mainContainer > button:hover{
+    color: #c2c6c9;
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#c2c6c9;
+}
+
+.imageWrapper{
+    width: 100%;
+    height: 250px;
+}
+
+.imageWrapper > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

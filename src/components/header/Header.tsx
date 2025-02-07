@@ -37,6 +37,12 @@ export default function Header(): JSX.Element {
         to={"cart"}
       >
         cart: {totalPrice}€
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? styles.linkActive : "")}
+        to={"store"}
+      >
+        store
       </NavLink>      
     </header>
   );

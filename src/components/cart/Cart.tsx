@@ -45,7 +45,7 @@ export default function Cart(): JSX.Element {
               </div>
               </div>
               <div className={styles.priceDelContainer}>
-              {(el.price * el.quantity).toFixed(2)}€
+              <p>{(el.price * el.quantity).toFixed(2)}€</p>
               <button onClick={() => removeFromCart(el.id)}>❌</button>
               </div>
             </div>
