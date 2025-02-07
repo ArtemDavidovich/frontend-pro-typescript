@@ -21,6 +21,14 @@
     color: #c2c6c9;
 }
 
+.detailsWrapper > button{
+    background-color: #c2c6c9;
+}
+
+.detailsWrapper > button:hover{
+    color: #c2c6c9;
+}
+
 .backLink:hover{
     color: white;
     text-decoration: underline;
