@@ -29,28 +29,32 @@ export default function Cart(): JSX.Element {
             <p>Subtotal:</p>
             <h3>{totalPrice}€</h3>
           </div>
-          <div className={styles.productsContainer}>
-          {cart.map((el) => (
-            <div className={styles.itemContainer}>
-              <div className={styles.imageWrapper}>
-                <img src={el.image} alt={el.title} />
-              </div>{" "}
-              <div className={styles.nameQuantContainer}>
-              <div className={styles.pWrapper}>
-                <p className={styles.pTitle}>{el.title.slice(0, 17) + "..."}</p>{" "}
-                <div className={styles.quantityWrapper}>
-                <button onClick={() => removeOneItem(el.id)}>-</button>
-                <p className={styles.pQuantity}>{el.quantity}</p>
-                <button onClick={() => addToCart(el)}>+</button>
+          <div className={styles.scrollWrapper}>
+            <div className={styles.productsContainer}>
+              {cart.map((el) => (
+                <div className={styles.itemContainer}>
+                  <div className={styles.imageWrapper}>
+                    <img src={el.image} alt={el.title} />
+                  </div>{" "}
+                  <div className={styles.nameQuantContainer}>
+                    <div className={styles.pWrapper}>
+                      <p className={styles.pTitle}>
+                        {el.title.slice(0, 17) + "..."}
+                      </p>{" "}
+                      <div className={styles.quantityWrapper}>
+                        <button onClick={() => removeOneItem(el.id)}>-</button>
+                        <p className={styles.pQuantity}>{el.quantity}</p>
+                        <button onClick={() => addToCart(el)}>+</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.priceDelContainer}>
+                    <p>{(el.price * el.quantity).toFixed(2)}€</p>
+                    <button onClick={() => removeFromCart(el.id)}>❌</button>
+                  </div>
                 </div>
-              </div>
-              </div>
-              <div className={styles.priceDelContainer}>
-              <p>{(el.price * el.quantity).toFixed(2)}€</p>
-              <button onClick={() => removeFromCart(el.id)}>❌</button>
-              </div>
+              ))}
             </div>
-          ))}
           </div>
           <MyButton variant="danger" text="Clear cart" func={clearCart} />
         </div>
