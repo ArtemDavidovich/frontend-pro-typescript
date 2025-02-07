@@ -29,6 +29,7 @@ export default function Cart(): JSX.Element {
             <p>Subtotal:</p>
             <h3>{totalPrice}€</h3>
           </div>
+          <div className={styles.productsContainer}>
           {cart.map((el) => (
             <div className={styles.itemContainer}>
               <div className={styles.imageWrapper}>
@@ -50,6 +51,7 @@ export default function Cart(): JSX.Element {
               </div>
             </div>
           ))}
+          </div>
           <MyButton variant="danger" text="Clear cart" func={clearCart} />
         </div>
       ) : (
