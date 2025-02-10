@@ -42,73 +42,72 @@ import Lesson16 from "./lessons/lesson16/Lesson16";
 import Lesson17 from "./lessons/lesson17/Lesson17";
 import Store from "./components/store/Store";
 import StorePage from "./components/storePage/StorePage";
-
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 
 export default function App(): JSX.Element {
   return (
-    // обернули все приложение в компонент-обертку CartProvider
-    <CartProvider>
-    {/* оборачиваем все приложение в компонент HashRouter из библиотеки React Router */}
-    <HashRouter>
-      {/* импортируем компонент Routes (пути) вокруг всех компонентов приложения */}
-      <Routes>
-        <Route path='/' element={<Layout/>}>
+    // ! обернули все приложение в компонент Provider из Redux и передали ему в качестве props store
+    <Provider store={store}>
+      {/* обернули все приложение в компонент-обертку CartProvider */}
+      <CartProvider>
+        {/* оборачиваем все приложение в компонент HashRouter из библиотеки React Router */}
+        <HashRouter>
+          {/* импортируем компонент Routes (пути) вокруг всех компонентов приложения */}
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="homework-page" element={<HomeworkPage />} />
+              <Route path="consultation-page" element={<ConsultationPage />} />
+              <Route path="products" element={<Products />} />
+              <Route path="products/:id/" element={<ProductPage />} />
+              <Route path="cart" element={<Cart />} />
 
-          <Route path='/' element={<HomePage/>} />          
-          <Route path='homework-page' element={<HomeworkPage/>} />          
-          <Route path='consultation-page' element={<ConsultationPage/>} />
-          <Route path='products' element={<Products/>} />
-          <Route path='products/:id/' element={<ProductPage/>} />
-          <Route path='cart' element={<Cart/>} />
+              <Route path="store" element={<Store />} />
+              <Route path="store/:id/" element={<StorePage />} />
 
-          <Route path='store' element={<Store/>} />
-          <Route path='store/:id/' element={<StorePage/>} />
+              <Route path="lesson-01" element={<Lesson01 />} />
+              <Route path="lesson-02" element={<Lesson02 />} />
+              <Route path="lesson-03" element={<Lesson03 />} />
+              <Route path="lesson-04" element={<Lesson04 />} />
+              <Route path="lesson-05" element={<Lesson05 />} />
+              <Route path="lesson-06" element={<Lesson06 />} />
+              <Route path="lesson-07" element={<Lesson07 />} />
+              <Route path="lesson-08" element={<Lesson08 />} />
+              <Route path="lesson-09" element={<Lesson09 />} />
+              <Route path="lesson-10" element={<Lesson10 />} />
+              <Route path="lesson-11" element={<Lesson11 />} />
+              <Route path="lesson-12" element={<Lesson12 />} />
+              <Route path="lesson-13" element={<Lesson13 />} />
+              <Route path="lesson-13" element={<Lesson13 />} />
+              <Route path="lesson-14" element={<Lesson14 />} />
+              <Route path="lesson-16" element={<Lesson16 />} />
+              <Route path="lesson-17" element={<Lesson17 />} />
 
+              <Route path="homework-01" element={<Homework01 />} />
+              <Route path="homework-02" element={<Homework02 />} />
+              <Route path="homework-03" element={<Homework03 />} />
+              <Route path="homework-04" element={<Homework04 />} />
+              <Route path="homework-05" element={<Homework05 />} />
+              <Route path="homework-06" element={<Homework06 />} />
+              <Route path="homework-07" element={<Homework07 />} />
+              <Route path="homework-08" element={<Homework08 />} />
+              <Route path="homework-09" element={<Homework09 />} />
+              <Route path="homework-10" element={<Homework10 />} />
+              <Route path="homework-11" element={<Homework11 />} />
 
+              <Route path="consultation-04" element={<Consultation04 />} />
+              <Route path="consultation-05" element={<Consultation05 />} />
 
+              <Route path="*" element={<NoPage />} />
 
-          <Route path='lesson-01' element={<Lesson01/>} />
-          <Route path='lesson-02' element={<Lesson02/>} />
-          <Route path='lesson-03' element={<Lesson03/>} />
-          <Route path='lesson-04' element={<Lesson04/>} />
-          <Route path='lesson-05' element={<Lesson05/>} />
-          <Route path='lesson-06' element={<Lesson06/>} />
-          <Route path='lesson-07' element={<Lesson07/>} />
-          <Route path='lesson-08' element={<Lesson08/>} />
-          <Route path='lesson-09' element={<Lesson09/>} />
-          <Route path='lesson-10' element={<Lesson10/>} />
-          <Route path='lesson-11' element={<Lesson11/>} />
-          <Route path='lesson-12' element={<Lesson12/>} />
-          <Route path='lesson-13' element={<Lesson13/>} />
-          <Route path='lesson-13' element={<Lesson13/>} />
-          <Route path='lesson-14' element={<Lesson14/>} />
-          <Route path='lesson-16' element={<Lesson16/>} />
-          <Route path='lesson-17' element={<Lesson17/>} />          
-
-          <Route path='homework-01' element={<Homework01/>} />          
-          <Route path='homework-02' element={<Homework02/>} />          
-          <Route path='homework-03' element={<Homework03/>} />          
-          <Route path='homework-04' element={<Homework04/>} />          
-          <Route path='homework-05' element={<Homework05/>} />          
-          <Route path='homework-06' element={<Homework06/>} />          
-          <Route path='homework-07' element={<Homework07/>} />
-          <Route path='homework-08' element={<Homework08/>} />
-          <Route path='homework-09' element={<Homework09/>} />
-          <Route path='homework-10' element={<Homework10/>} />
-          <Route path='homework-11' element={<Homework11/>} />          
-
-          <Route path='consultation-04' element={<Consultation04/>} />
-          <Route path='consultation-05' element={<Consultation05/>} />
-
-          <Route path='*' element={<NoPage/>} />
-
-          {/* different staff */}
-          <Route path='login-form' element={<FormLogin/>} />
-          <Route path='registration-form' element={<FormRegistration/>} />
-
-        </Route>
-      </Routes>      
-    </HashRouter>
-    </CartProvider>
+              {/* different staff */}
+              <Route path="login-form" element={<FormLogin />} />
+              <Route path="registration-form" element={<FormRegistration />} />
+            </Route>
+          </Routes>
+        </HashRouter>
+      </CartProvider>
+    </Provider>
   );
 }
